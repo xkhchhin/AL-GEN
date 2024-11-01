@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>147c2bf4-1cfa-4e95-a9fa-5b74a2a49218</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="CompanyShiptoAddr1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CompanyShiptoAddr1.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyShiptoAddr1</rd:DefaultName>
+            <Top>0.14458in</Top>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CompanyShiptoAddr3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CompanyShiptoAddr3.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyShiptoAddr3</rd:DefaultName>
+            <Top>0.14458in</Top>
+            <Left>1.06944in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CompanyShiptoAddr4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CompanyShiptoAddr4.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyShiptoAddr4</rd:DefaultName>
+            <Top>0.14458in</Top>
+            <Left>2.19667in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CompanyShiptoAddr5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CompanyShiptoAddr5.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyShiptoAddr5</rd:DefaultName>
+            <Top>0.14458in</Top>
+            <Left>3.45708in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CompanyShiptoAddr6">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CompanyShiptoAddr6.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyShiptoAddr6</rd:DefaultName>
+            <Top>0.20708in</Top>
+            <Left>5.03in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CompanyInfoAddress1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CompanyInfoAddress1.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyInfoAddress1</rd:DefaultName>
+            <Top>0.63417in</Top>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CompanyInfoAddress2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CompanyInfoAddress2.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyInfoAddress2</rd:DefaultName>
+            <Top>0.63417in</Top>
+            <Left>1.06944in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CompanyInfoAddress3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CompanyInfoAddress3.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyInfoAddress3</rd:DefaultName>
+            <Top>0.63417in</Top>
+            <Left>2.19667in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CompanyInfoAddress4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CompanyInfoAddress4.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyInfoAddress4</rd:DefaultName>
+            <Top>0.63417in</Top>
+            <Left>3.35292in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CompanyInfoAddress5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CompanyInfoAddress5.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyInfoAddress5</rd:DefaultName>
+            <Top>0.63417in</Top>
+            <Left>4.55083in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BuyFromAddress1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!BuyFromAddress1.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BuyFromAddress1</rd:DefaultName>
+            <Top>1.14458in</Top>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BuyFromAddress2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!BuyFromAddress2.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BuyFromAddress2</rd:DefaultName>
+            <Top>1.14458in</Top>
+            <Left>1.20708in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BuyFromAddress3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!BuyFromAddress3.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BuyFromAddress3</rd:DefaultName>
+            <Top>1.14458in</Top>
+            <Left>2.33208in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BuyFromAddress4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!BuyFromAddress4.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BuyFromAddress4</rd:DefaultName>
+            <Top>1.14458in</Top>
+            <Left>3.45708in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BuyFromAddress5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!BuyFromAddress5.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BuyFromAddress5</rd:DefaultName>
+            <Top>1.14458in</Top>
+            <Left>4.55083in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="PhoneNoCompanyInfo">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!PhoneNoCompanyInfo.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PhoneNoCompanyInfo</rd:DefaultName>
+            <Top>1.63417in</Top>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="vatRgistration_no">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!vatRgistration_no.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>vatRgistration_no</rd:DefaultName>
+            <Top>1.63417in</Top>
+            <Left>1.20708in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <PageHeight>11.69in</PageHeight>
+        <PageWidth>8.27in</PageWidth>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
+        <TopMargin>0.25in</TopMargin>
+        <BottomMargin>0.25in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyShiptoAddr1">
+          <DataField>CompanyShiptoAddr1</DataField>
+        </Field>
+        <Field Name="CompanyShiptoAddr2">
+          <DataField>CompanyShiptoAddr2</DataField>
+        </Field>
+        <Field Name="CompanyShiptoAddr3">
+          <DataField>CompanyShiptoAddr3</DataField>
+        </Field>
+        <Field Name="CompanyShiptoAddr4">
+          <DataField>CompanyShiptoAddr4</DataField>
+        </Field>
+        <Field Name="CompanyShiptoAddr5">
+          <DataField>CompanyShiptoAddr5</DataField>
+        </Field>
+        <Field Name="CompanyShiptoAddr6">
+          <DataField>CompanyShiptoAddr6</DataField>
+        </Field>
+        <Field Name="CompanyShiptoAddr7">
+          <DataField>CompanyShiptoAddr7</DataField>
+        </Field>
+        <Field Name="CompanyShiptoAddr8">
+          <DataField>CompanyShiptoAddr8</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress1">
+          <DataField>CompanyInfoAddress1</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress2">
+          <DataField>CompanyInfoAddress2</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress3">
+          <DataField>CompanyInfoAddress3</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress4">
+          <DataField>CompanyInfoAddress4</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress5">
+          <DataField>CompanyInfoAddress5</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress6">
+          <DataField>CompanyInfoAddress6</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress7">
+          <DataField>CompanyInfoAddress7</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress8">
+          <DataField>CompanyInfoAddress8</DataField>
+        </Field>
+        <Field Name="BuyFromAddress1">
+          <DataField>BuyFromAddress1</DataField>
+        </Field>
+        <Field Name="BuyFromAddress2">
+          <DataField>BuyFromAddress2</DataField>
+        </Field>
+        <Field Name="BuyFromAddress3">
+          <DataField>BuyFromAddress3</DataField>
+        </Field>
+        <Field Name="BuyFromAddress4">
+          <DataField>BuyFromAddress4</DataField>
+        </Field>
+        <Field Name="BuyFromAddress5">
+          <DataField>BuyFromAddress5</DataField>
+        </Field>
+        <Field Name="BuyFromAddress6">
+          <DataField>BuyFromAddress6</DataField>
+        </Field>
+        <Field Name="BuyFromAddress7">
+          <DataField>BuyFromAddress7</DataField>
+        </Field>
+        <Field Name="BuyFromAddress8">
+          <DataField>BuyFromAddress8</DataField>
+        </Field>
+        <Field Name="purchaseQuote">
+          <DataField>purchaseQuote</DataField>
+        </Field>
+        <Field Name="phone_no">
+          <DataField>phone_no</DataField>
+        </Field>
+        <Field Name="email">
+          <DataField>email</DataField>
+        </Field>
+        <Field Name="vatRgistration_noPH">
+          <DataField>vatRgistration_noPH</DataField>
+        </Field>
+        <Field Name="buy_from">
+          <DataField>buy_from</DataField>
+        </Field>
+        <Field Name="ship_to">
+          <DataField>ship_to</DataField>
+        </Field>
+        <Field Name="document_date">
+          <DataField>document_date</DataField>
+        </Field>
+        <Field Name="requested_reciept_date">
+          <DataField>requested_reciept_date</DataField>
+        </Field>
+        <Field Name="due_date">
+          <DataField>due_date</DataField>
+        </Field>
+        <Field Name="vendor_order_no">
+          <DataField>vendor_order_no</DataField>
+        </Field>
+        <Field Name="purchaser">
+          <DataField>purchaser</DataField>
+        </Field>
+        <Field Name="purchaser_email">
+          <DataField>purchaser_email</DataField>
+        </Field>
+        <Field Name="PhoneNoCompanyInfo">
+          <DataField>PhoneNoCompanyInfo</DataField>
+        </Field>
+        <Field Name="vatRgistration_no">
+          <DataField>vatRgistration_no</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

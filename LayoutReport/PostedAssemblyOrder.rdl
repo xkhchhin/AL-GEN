@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="PostedAssemblyOrderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PostedAssemblyOrderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PostedAssemblyOrderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AssemblyItemCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AssemblyItemCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AssemblyItemCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BillOfMaterialCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>BillOfMaterialCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>BillOfMaterialCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AssembledToShipmentCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AssembledToShipmentCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AssembledToShipmentCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="UnitofMeasureCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>UnitofMeasureCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>UnitofMeasureCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AssembledQuantityCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AssembledQuantityCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AssembledQuantityCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TypeCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>TypeCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>TypeCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="NumberCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>NumberCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>NumberCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DescriptionCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DescriptionCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DescriptionCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="QtyPerCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>QtyPerCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>QtyPerCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ConsumedQuantityCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ConsumedQuantityCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ConsumedQuantityCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PageCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PageCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PageCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReversedCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ReversedCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ReversedCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReportNameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ReportNameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ReportNameCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="HeaderDimensionsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>HeaderDimensionsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>HeaderDimensionsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LineDimensionsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>LineDimensionsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>LineDimensionsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CopyCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CopyCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CopyCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="No_PostedAssemblyHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>No_PostedAssemblyHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>No_PostedAssemblyHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="OrderNo_PostedAssemblyHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>OrderNo_PostedAssemblyHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>OrderNo_PostedAssemblyHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ItemNo_PostedAssemblyHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ItemNo_PostedAssemblyHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ItemNo_PostedAssemblyHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Description_PostedAssemblyHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Description_PostedAssemblyHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Description_PostedAssemblyHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AssembledQuantity_PostedAssemblyHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AssembledQuantity_PostedAssemblyHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AssembledQuantity_PostedAssemblyHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Type_PostedAssemblyLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Type_PostedAssemblyLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Type_PostedAssemblyLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="No_PostedAssemblyLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>No_PostedAssemblyLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>No_PostedAssemblyLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Description_PostedAssemblyLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Description_PostedAssemblyLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Description_PostedAssemblyLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Quantity_PostedAssemblyLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Quantity_PostedAssemblyLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Quantity_PostedAssemblyLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Quantityper_PostedAssemblyLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Quantityper_PostedAssemblyLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Quantityper_PostedAssemblyLineCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Number">
+          <DataField>Number</DataField>
+        </Field>
+        <Field Name="No_PostedAssemblyHeader">
+          <DataField>No_PostedAssemblyHeader</DataField>
+        </Field>
+        <Field Name="CompanyInfo">
+          <DataField>CompanyInfo</DataField>
+        </Field>
+        <Field Name="OrderNo_PostedAssemblyHeader">
+          <DataField>OrderNo_PostedAssemblyHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_PostedAssemblyHeader">
+          <DataField>PostingDate_PostedAssemblyHeader</DataField>
+        </Field>
+        <Field Name="Reversed_PostedAssemblyHeader">
+          <DataField>Reversed_PostedAssemblyHeader</DataField>
+        </Field>
+        <Field Name="ItemNo_PostedAssemblyHeader">
+          <DataField>ItemNo_PostedAssemblyHeader</DataField>
+        </Field>
+        <Field Name="Description_PostedAssemblyHeader">
+          <DataField>Description_PostedAssemblyHeader</DataField>
+        </Field>
+        <Field Name="AssembledQuantity_PostedAssemblyHeader">
+          <DataField>AssembledQuantity_PostedAssemblyHeader</DataField>
+        </Field>
+        <Field Name="AssembledQuantity_PostedAssemblyHeaderFormat">
+          <DataField>AssembledQuantity_PostedAssemblyHeaderFormat</DataField>
+        </Field>
+        <Field Name="UnitOfMeasure_PostedAssemblyHeader">
+          <DataField>UnitOfMeasure_PostedAssemblyHeader</DataField>
+        </Field>
+        <Field Name="LinkedSalesShipment">
+          <DataField>LinkedSalesShipment</DataField>
+        </Field>
+        <Field Name="CompanyNameConstant">
+          <DataField>CompanyNameConstant</DataField>
+        </Field>
+        <Field Name="DateConstant">
+          <DataField>DateConstant</DataField>
+        </Field>
+        <Field Name="PostingDateConstant">
+          <DataField>PostingDateConstant</DataField>
+        </Field>
+        <Field Name="DimText">
+          <DataField>DimText</DataField>
+        </Field>
+        <Field Name="DimLineNo">
+          <DataField>DimLineNo</DataField>
+        </Field>
+        <Field Name="LineNo_PostedAssemblyLine">
+          <DataField>LineNo_PostedAssemblyLine</DataField>
+        </Field>
+        <Field Name="Type_PostedAssemblyLine">
+          <DataField>Type_PostedAssemblyLine</DataField>
+        </Field>
+        <Field Name="No_PostedAssemblyLine">
+          <DataField>No_PostedAssemblyLine</DataField>
+        </Field>
+        <Field Name="Description_PostedAssemblyLine">
+          <DataField>Description_PostedAssemblyLine</DataField>
+        </Field>
+        <Field Name="Quantity_PostedAssemblyLine">
+          <DataField>Quantity_PostedAssemblyLine</DataField>
+        </Field>
+        <Field Name="Quantity_PostedAssemblyLineFormat">
+          <DataField>Quantity_PostedAssemblyLineFormat</DataField>
+        </Field>
+        <Field Name="Quantityper_PostedAssemblyLine">
+          <DataField>Quantityper_PostedAssemblyLine</DataField>
+        </Field>
+        <Field Name="Quantityper_PostedAssemblyLineFormat">
+          <DataField>Quantityper_PostedAssemblyLineFormat</DataField>
+        </Field>
+        <Field Name="UnitOfMeasureDescription_PostedAssemblyLine">
+          <DataField>UnitOfMeasureDescription_PostedAssemblyLine</DataField>
+        </Field>
+        <Field Name="DimText2">
+          <DataField>DimText2</DataField>
+        </Field>
+        <Field Name="DimLineNo2">
+          <DataField>DimLineNo2</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

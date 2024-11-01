@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="PostingDateCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PostingDateCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PostingDateCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ShptMethodCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ShptMethodCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ShptMethodCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="InTransit_TransShptHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>InTransit_TransShptHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>InTransit_TransShptHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ItemNo_TransShptLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ItemNo_TransShptLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ItemNo_TransShptLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Desc_TransShptLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Desc_TransShptLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Desc_TransShptLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Qty_TransShptLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Qty_TransShptLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Qty_TransShptLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="UOM_TransShptLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>UOM_TransShptLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>UOM_TransShptLineCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="UserFullName">
+          <DataField>UserFullName</DataField>
+        </Field>
+        <Field Name="CompanyInfo">
+          <DataField>CompanyInfo</DataField>
+        </Field>
+        <Field Name="TransferOrderNo">
+          <DataField>TransferOrderNo</DataField>
+        </Field>
+        <Field Name="TransferOrderNoCap">
+          <DataField>TransferOrderNoCap</DataField>
+        </Field>
+        <Field Name="No_TransShptHeader">
+          <DataField>No_TransShptHeader</DataField>
+        </Field>
+        <Field Name="No_TransferHdrCap">
+          <DataField>No_TransferHdrCap</DataField>
+        </Field>
+        <Field Name="PostingDate_hdr">
+          <DataField>PostingDate_hdr</DataField>
+        </Field>
+        <Field Name="PostingDate_hdrCap">
+          <DataField>PostingDate_hdrCap</DataField>
+        </Field>
+        <Field Name="ShipmentDate_hdr">
+          <DataField>ShipmentDate_hdr</DataField>
+        </Field>
+        <Field Name="ShipmentDate_hdrCap">
+          <DataField>ShipmentDate_hdrCap</DataField>
+        </Field>
+        <Field Name="ReceiptDate_hdr">
+          <DataField>ReceiptDate_hdr</DataField>
+        </Field>
+        <Field Name="ReceiptDate_hdrCap">
+          <DataField>ReceiptDate_hdrCap</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNo">
+          <DataField>ExternalDocumentNo</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNoCap">
+          <DataField>ExternalDocumentNoCap</DataField>
+        </Field>
+        <Field Name="TransferFromCap">
+          <DataField>TransferFromCap</DataField>
+        </Field>
+        <Field Name="TransferToCap">
+          <DataField>TransferToCap</DataField>
+        </Field>
+        <Field Name="UOMCaption">
+          <DataField>UOMCaption</DataField>
+        </Field>
+        <Field Name="BarcodeImage">
+          <DataField>BarcodeImage</DataField>
+        </Field>
+        <Field Name="PrintBarcode">
+          <DataField>PrintBarcode</DataField>
+        </Field>
+        <Field Name="TransferOrderNoCaptionTranslated">
+          <DataField>TransferOrderNoCaptionTranslated</DataField>
+        </Field>
+        <Field Name="PostingDateCaptionTranslated">
+          <DataField>PostingDateCaptionTranslated</DataField>
+        </Field>
+        <Field Name="ShipmentDateCaptionTranslated">
+          <DataField>ShipmentDateCaptionTranslated</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNoCaptionTranslated">
+          <DataField>ExternalDocumentNoCaptionTranslated</DataField>
+        </Field>
+        <Field Name="ShipmentMethodCaptionTranslated">
+          <DataField>ShipmentMethodCaptionTranslated</DataField>
+        </Field>
+        <Field Name="IntransitCodeCaptionTranslated">
+          <DataField>IntransitCodeCaptionTranslated</DataField>
+        </Field>
+        <Field Name="CompanyInfo2Picture">
+          <DataField>CompanyInfo2Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo3Picture">
+          <DataField>CompanyInfo3Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo1Picture">
+          <DataField>CompanyInfo1Picture</DataField>
+        </Field>
+        <Field Name="CopyTextCaption">
+          <DataField>CopyTextCaption</DataField>
+        </Field>
+        <Field Name="TransferToAddr1">
+          <DataField>TransferToAddr1</DataField>
+        </Field>
+        <Field Name="TransferFromAddr1">
+          <DataField>TransferFromAddr1</DataField>
+        </Field>
+        <Field Name="TransferToAddr2">
+          <DataField>TransferToAddr2</DataField>
+        </Field>
+        <Field Name="TransferFromAddr2">
+          <DataField>TransferFromAddr2</DataField>
+        </Field>
+        <Field Name="TransferToAddr3">
+          <DataField>TransferToAddr3</DataField>
+        </Field>
+        <Field Name="TransferFromAddr3">
+          <DataField>TransferFromAddr3</DataField>
+        </Field>
+        <Field Name="TransferToAddr4">
+          <DataField>TransferToAddr4</DataField>
+        </Field>
+        <Field Name="TransferFromAddr4">
+          <DataField>TransferFromAddr4</DataField>
+        </Field>
+        <Field Name="TransferToAddr5">
+          <DataField>TransferToAddr5</DataField>
+        </Field>
+        <Field Name="TransferToAddr6">
+          <DataField>TransferToAddr6</DataField>
+        </Field>
+        <Field Name="CompanyAddr1">
+          <DataField>CompanyAddr1</DataField>
+        </Field>
+        <Field Name="CompanyAddr2">
+          <DataField>CompanyAddr2</DataField>
+        </Field>
+        <Field Name="CompanyAddr3">
+          <DataField>CompanyAddr3</DataField>
+        </Field>
+        <Field Name="CompanyAddr4">
+          <DataField>CompanyAddr4</DataField>
+        </Field>
+        <Field Name="CompanyInfoPhoneNo">
+          <DataField>CompanyInfoPhoneNo</DataField>
+        </Field>
+        <Field Name="CompanyInfoPhoneNoCap">
+          <DataField>CompanyInfoPhoneNoCap</DataField>
+        </Field>
+        <Field Name="CompanyInfoHomePageCap">
+          <DataField>CompanyInfoHomePageCap</DataField>
+        </Field>
+        <Field Name="CompanyInfoHomePage">
+          <DataField>CompanyInfoHomePage</DataField>
+        </Field>
+        <Field Name="CompanyInfoEmail">
+          <DataField>CompanyInfoEmail</DataField>
+        </Field>
+        <Field Name="CompanyInfoEmailCap">
+          <DataField>CompanyInfoEmailCap</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoBankName">
+          <DataField>CompanyInfoBankName</DataField>
+        </Field>
+        <Field Name="CompanyInfoBankNameCap">
+          <DataField>CompanyInfoBankNameCap</DataField>
+        </Field>
+        <Field Name="CompanyInfoBankAccountNo">
+          <DataField>CompanyInfoBankAccountNo</DataField>
+        </Field>
+        <Field Name="CompanyInfoBankBranchNo">
+          <DataField>CompanyInfoBankBranchNo</DataField>
+        </Field>
+        <Field Name="CompanyInfoSwiftCode">
+          <DataField>CompanyInfoSwiftCode</DataField>
+        </Field>
+        <Field Name="QuantityCaption">
+          <DataField>QuantityCaption</DataField>
+        </Field>
+        <Field Name="DescriptionCaption">
+          <DataField>DescriptionCaption</DataField>
+        </Field>
+        <Field Name="UnitofMeasureCaption">
+          <DataField>UnitofMeasureCaption</DataField>
+        </Field>
+        <Field Name="CompanyInfoBankAccountNoCap">
+          <DataField>CompanyInfoBankAccountNoCap</DataField>
+        </Field>
+        <Field Name="InTransit_TransShptHeader">
+          <DataField>InTransit_TransShptHeader</DataField>
+        </Field>
+        <Field Name="PostDate_TransShptHeader">
+          <DataField>PostDate_TransShptHeader</DataField>
+        </Field>
+        <Field Name="No2_TransShptHeader">
+          <DataField>No2_TransShptHeader</DataField>
+        </Field>
+        <Field Name="TransferToAddr7">
+          <DataField>TransferToAddr7</DataField>
+        </Field>
+        <Field Name="TransferToAddr8">
+          <DataField>TransferToAddr8</DataField>
+        </Field>
+        <Field Name="TransferFromAddr5">
+          <DataField>TransferFromAddr5</DataField>
+        </Field>
+        <Field Name="TransferFromAddr6">
+          <DataField>TransferFromAddr6</DataField>
+        </Field>
+        <Field Name="ShiptDate_TransShptHeader">
+          <DataField>ShiptDate_TransShptHeader</DataField>
+        </Field>
+        <Field Name="TransferFromAddr7">
+          <DataField>TransferFromAddr7</DataField>
+        </Field>
+        <Field Name="TransferFromAddr8">
+          <DataField>TransferFromAddr8</DataField>
+        </Field>
+        <Field Name="PageCaption">
+          <DataField>PageCaption</DataField>
+        </Field>
+        <Field Name="OutputNo">
+          <DataField>OutputNo</DataField>
+        </Field>
+        <Field Name="Desc_ShptMethod">
+          <DataField>Desc_ShptMethod</DataField>
+        </Field>
+        <Field Name="TransShptHdrNoCaption">
+          <DataField>TransShptHdrNoCaption</DataField>
+        </Field>
+        <Field Name="TransShptShptDateCaption">
+          <DataField>TransShptShptDateCaption</DataField>
+        </Field>
+        <Field Name="DimText">
+          <DataField>DimText</DataField>
+        </Field>
+        <Field Name="Number_DimensionLoop1">
+          <DataField>Number_DimensionLoop1</DataField>
+        </Field>
+        <Field Name="HdrDimCaption">
+          <DataField>HdrDimCaption</DataField>
+        </Field>
+        <Field Name="ShowInternalInfo">
+          <DataField>ShowInternalInfo</DataField>
+        </Field>
+        <Field Name="NoOfCopies">
+          <DataField>NoOfCopies</DataField>
+        </Field>
+        <Field Name="ItemNo_TransShptLine">
+          <DataField>ItemNo_TransShptLine</DataField>
+        </Field>
+        <Field Name="Desc_TransShptLine">
+          <DataField>Desc_TransShptLine</DataField>
+        </Field>
+        <Field Name="Qty_TransShptLine">
+          <DataField>Qty_TransShptLine</DataField>
+        </Field>
+        <Field Name="Qty_TransShptLineFormat">
+          <DataField>Qty_TransShptLineFormat</DataField>
+        </Field>
+        <Field Name="UOM_TransShptLine">
+          <DataField>UOM_TransShptLine</DataField>
+        </Field>
+        <Field Name="LineNo_TransShptLine">
+          <DataField>LineNo_TransShptLine</DataField>
+        </Field>
+        <Field Name="DocNo_TransShptLine">
+          <DataField>DocNo_TransShptLine</DataField>
+        </Field>
+        <Field Name="ItemTrackingSpec_LotNo_">
+          <DataField>ItemTrackingSpec_LotNo_</DataField>
+        </Field>
+        <Field Name="ItemTrackingSpec_ExpirationDate">
+          <DataField>ItemTrackingSpec_ExpirationDate</DataField>
+        </Field>
+        <Field Name="DimText4">
+          <DataField>DimText4</DataField>
+        </Field>
+        <Field Name="Number_DimensionLoop2">
+          <DataField>Number_DimensionLoop2</DataField>
+        </Field>
+        <Field Name="LineDimCaption">
+          <DataField>LineDimCaption</DataField>
+        </Field>
+        <Field Name="TrackingSpecBufferItemNo">
+          <DataField>TrackingSpecBufferItemNo</DataField>
+        </Field>
+        <Field Name="TrackingSpecBufferDescription">
+          <DataField>TrackingSpecBufferDescription</DataField>
+        </Field>
+        <Field Name="TrackingSpecBufferLotNo">
+          <DataField>TrackingSpecBufferLotNo</DataField>
+        </Field>
+        <Field Name="TrackingSpecBufferSerialNo">
+          <DataField>TrackingSpecBufferSerialNo</DataField>
+        </Field>
+        <Field Name="TrackingSpecBufferQuantity">
+          <DataField>TrackingSpecBufferQuantity</DataField>
+        </Field>
+        <Field Name="TrackingSpecBufferQuantityFormat">
+          <DataField>TrackingSpecBufferQuantityFormat</DataField>
+        </Field>
+        <Field Name="ShowTotal">
+          <DataField>ShowTotal</DataField>
+        </Field>
+        <Field Name="ShowGroup">
+          <DataField>ShowGroup</DataField>
+        </Field>
+        <Field Name="SerialNoCaption">
+          <DataField>SerialNoCaption</DataField>
+        </Field>
+        <Field Name="LotNoCaption">
+          <DataField>LotNoCaption</DataField>
+        </Field>
+        <Field Name="NoCaption">
+          <DataField>NoCaption</DataField>
+        </Field>
+        <Field Name="TotalQuantity">
+          <DataField>TotalQuantity</DataField>
+        </Field>
+        <Field Name="TotalQuantityFormat">
+          <DataField>TotalQuantityFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
